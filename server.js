@@ -25,7 +25,7 @@ app.post('/api/comments', (req, res) => {
   if (newComment) {
     res.json(newComment);
   } else {
-    res.status(401).json({error: 'Please check your inputs'});
+    res.status(401).json({ error: 'Please check your inputs' });
   }
 });
 
@@ -37,7 +37,7 @@ app.post('/api/comment_replies', (req, res) => {
   if (newReply) {
     res.json(newReply);
   } else {
-    res.status(401).json({error: 'Please check your inputs'});
+    res.status(401).json({ error: 'Please check your inputs' });
   }
 });
 
