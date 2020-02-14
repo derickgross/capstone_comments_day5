@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import CommentsList from './CommentsList';
-import CommentsForm from './CommentsForm';
-// import commentsData from '../lib/comments';
-
+import CommentsListContainer from './CommentsListContainer';
+import CommentsFormContainer from './CommentsFormContainer';
 
 const CommentDashboard = () => {
   return (
     <div>
-      <CommentsList />
-      <CommentsForm />
+      <CommentsListContainer />
+      <CommentsFormContainer />
     </div>
   );
 }

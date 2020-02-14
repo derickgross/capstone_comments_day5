@@ -24,30 +24,12 @@ class CommentsForm extends Component {
       body: this.state.body,
     };
 
-    fetch('/api/comments', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(comment),
-    })
-      .then((response) => response.json())
-      .then((newComment) => {
-        store.dispatch({
-          type: 'COMMENT_CREATED',
-          payload: {
-            comment: newComment,
-          },
-        });
+    this.props.onSubmit(comment);
 
-        this.setState({
-          author: "",
-          body: "",
-        });
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
+    this.setState({
+      author: "",
+      body: "",
+    });
   }
 
   render() {
